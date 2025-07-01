@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utlis/wrapAsync.js");
 const Listing = require("../models/listing.js");
+const { listingSchema } = require("../schema.js");
+const ExpressError = require("../utlis/ExpressError.js");  // also import ExpressError here if not imported yet
 const { isLoggedIn,isOwner,validateListing } = require("../middleware.js");
 
 
