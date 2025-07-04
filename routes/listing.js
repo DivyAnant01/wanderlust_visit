@@ -5,15 +5,11 @@ const Listing = require("../models/listing.js");
 const { listingSchema } = require("../schema.js");
 const ExpressError = require("../utlis/ExpressError.js");  // also import ExpressError here if not imported yet
 const { isLoggedIn,isOwner,validateListing } = require("../middleware.js");
-
+const listingController=require("../controllers/listing.js");
 
 
 //index route
-router.get("/", wrapAsync(async (req, res) => {
-    const allListings = await Listing.find({});
-    res.render("./listings/index.ejs", { allListings });
-
-}));
+router.get("/", wrapAsync(listingController.index));
 
 //new route
 router.get("/new",isLoggedIn, (req, res) => {
