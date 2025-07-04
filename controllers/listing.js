@@ -1,4 +1,6 @@
-const Listing=require("../models/listing");
+const Listing=require("../models/listing.js");
+const { listingSchema } = require("../schema.js");
+
 module.exports.index=async (req, res) => {
     const allListings = await Listing.find({});
     res.render("./listings/index.ejs", { allListings });
