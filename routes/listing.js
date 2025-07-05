@@ -7,12 +7,19 @@ const ExpressError = require("../utlis/ExpressError.js");  // also import Expres
 const { isLoggedIn,isOwner,validateListing } = require("../middleware.js");
 const listingController=require("../controllers/listing.js");
 
+const multer  = require('multer')
+const{storage}=require("../cloudConfig.js");
+const upload = multer({storage})
 
-router.route("/").get(wrapAsync(listingController.index))
-.post(isLoggedIn,
-    validateListing,
-    wrapAsync(listingController.createListing)//using mvc
-);
+router.route("/")
+.get(wrapAsync(listingController.index))
+// .post(isLoggedIn,
+//     validateListing,
+//     wrapAsync(listingController.createListing)//using mvc
+// );
+.post(upload.single('listing[image]'),(req,res)=>{
+    res.send(req.file);
+})
 
 //new route
 router.get("/new",isLoggedIn,listingController.renderNewForm);//using mvc
