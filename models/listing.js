@@ -11,8 +11,8 @@ const listingSchema = new Schema({
     description: String,
     image: {
         type: {
-            filename: { type: String },  // Store the filename (optional)
-            url: { type: String },       // Store the URL (required)
+            filename: String ,  // Store the filename (optional)
+            url:String ,       // Store the URL (required)
         },
         default: {
             filename: 'listingimage',  // default filename

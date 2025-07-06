@@ -30,15 +30,23 @@ module.exports.isOwner = async(req,res,next)=>{
 };
 
 
-module.exports. validateListing = (req, res, next) => {
-    let { error } = listingSchema.validate(req.body);
-    if (error) {
-        let errMsg = error.details.map((el) => el.message).join(",");
-        throw new ExpressError(400, errMsg);
-    } else {
-        next();
+module.exports.validateListing = (req, res, next) => {
+    // ✅ Inject image data from req.file into req.body so Joi can validate it
+    if (req.file) {
+        req.body.listing.image = {
+            url: req.file.path,
+            filename: req.file.filename
+        };
     }
-}
+
+    const { error } = listingSchema.validate(req.body);
+    if (error) {
+        const errMsg = error.details.map((el) => el.message).join(",");
+        throw new ExpressError(400, errMsg);
+    }
+    next();
+};
+
 
 
 module.exports.validateReview = (req, res, next) => {
