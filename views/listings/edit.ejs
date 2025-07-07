@@ -23,6 +23,11 @@
                     <input required type="text" name="listing[image][filename]" class="form-control"
                         value="<%= listing.image.filename %>">
                 </div> -->
+                <div class="mb-3">
+                    <label for="image-preview" class="form-label">Original Listing Image</label>
+                    <br>
+                    <img src=<%= originalListingUrl %>>
+                </div>
 
                 <div class="mb-3">
                     <label for="imageUrl" class="form-label">Upload new img</label>

@@ -49,15 +49,17 @@ module.exports.createListing = async (req, res, next) => {
 };
 
 // Render edit form
-module.exports.renderEditForm = async (req, res) => {
-    let { id } = req.params;
+module.exports.renderEditForm = async (req,res,next) => {
+    let {id} = req.params;
     const listing = await Listing.findById(id);
-    if (!listing) {
-        req.flash("error", "Listing you requested for does not exist!");
-        return res.redirect("/listings");
+    if(!listing){
+        req.flash("error","listing does not exist");
+        res.redirect("/listings");
     }
-    res.render("./listings/edit.ejs", { listing });
-};
+    let originalListingUrl = listing.image.url;
+    originalListingUrl = originalListingUrl.replace("/upload","/upload/w_250");
+    res.render("listings/edit.ejs",{listing,originalListingUrl});
+}
 
 // ✅ FIXED: Update listing
 module.exports.updateListing = async (req, res, next) => {
