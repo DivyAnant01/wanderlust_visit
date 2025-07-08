@@ -10,3 +10,8 @@ create .env and add these:
 CLOUD_NAME = your_cloud_name
 CLOUD_API_KEY = your_api-key
 CLOUD_API_SECRET = your_api_secret
+
+start with maps
+signup on mapbox 
+and copy default public token and paste it in .env file
+MAP_TOKEN = public key

@@ -70,9 +70,9 @@ app.use((req, res, next) => {
 });
 
 // Root route
-app.get("/", (req, res) => {
-    res.send("I am root");
-});
+// app.get("/", (req, res) => {
+//     res.send("I am root");
+// });
 
 // Routes
 app.use("/listings", listingRouter);
