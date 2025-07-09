@@ -15,3 +15,13 @@ start with maps
 signup on mapbox 
 and copy default public token and paste it in .env file
 MAP_TOKEN = public key
+
+
+
+use online db instead of local db so use mongodb atlas{cloud database service}
+this is local system url for store info in app.js  {const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+}  replace it with new url and create dburl variable and store data from .env file.
+
+we use online db for store data so in .env file create ATLASDB_URL = <cluster url> with ATLAS password.
+
+and when we were host project ,.env file ki info yaha store nahi hogi jaha pr bhi cloud service lere honge deployment kr rhe honge waha store krynge.waha pr platform ke uper env variable ko store krynge.
