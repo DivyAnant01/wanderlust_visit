@@ -25,3 +25,7 @@ this is local system url for store info in app.js  {const MONGO_URL = "mongodb:/
 we use online db for store data so in .env file create ATLASDB_URL = <cluster url> with ATLAS password.
 
 and when we were host project ,.env file ki info yaha store nahi hogi jaha pr bhi cloud service lere honge deployment kr rhe honge waha store krynge.waha pr platform ke uper env variable ko store krynge.
+
+
+live project link :  https://wanderlust-visit.onrender.com
+{i use render for deployment project with crossblaze email and github login};
