@@ -29,3 +29,42 @@ and when we were host project ,.env file ki info yaha store nahi hogi jaha pr bh
 
 live project link :  https://wanderlust-visit.onrender.com
 {i use render for deployment project with crossblaze email and github login};
+
+--------------------------------------------------------------
+🏡 Wanderlust — A MERN Stack Airbnb Clone
+Live Demo: wanderlust-visit.onrender.com
+
+Wanderlust is a full-stack web application inspired by Airbnb, built using the MERN Stack (MongoDB, Express.js, React.js, Node.js). The platform allows users to explore, list, and rent properties such as hotels, rooms, and vacation stays — ideal for tourists looking for comfortable accommodations during their travels.
+
+🚀 Features:
+🔍 Property Browsing: Tourists can explore various property listings with detailed descriptions and images.
+
+🏘️ Add Your Own Listing: Hosts can upload new properties to rent, complete with image uploads, location, and pricing.
+
+📸 Cloud Image Upload: Images are uploaded and stored using Cloudinary.
+
+🌍 Responsive UI: Clean, responsive design for both desktop and mobile views.
+
+🔐 User Authentication: Secure login and signup functionality using sessions or JWT.
+
+🗺️ Map Integration (optional): Location of listings can be displayed via integrated maps.
+
+📦 Full CRUD Support: Users can create, read, update, and delete listings.
+
+📁 Modular Codebase: Well-structured backend and frontend code with MVC pattern.
+
+🛠️ Tech Stack:
+Frontend: React.js, JSX, TailwindCSS / Bootstrap / Custom CSS
+
+Backend: Node.js, Express.js
+
+Database: MongoDB (with Mongoose)
+
+Image Storage: Cloudinary
+
+Authentication: Express-session / JWT (based on your setup)
+
+Hosting: Render (for both frontend & backend)
+
+🎯 Purpose:
+This project was built to simulate a real-world rental platform where tourists can find and book stays easily. It’s ideal for showcasing full-stack development skills, especially in CRUD operations, authentication, third-party integrations, and responsive design.
